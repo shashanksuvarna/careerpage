@@ -28,12 +28,17 @@ class Save extends Action
      */
     public function execute()
     {
+    
+
         $resultPageFactory = $this->resultRedirectFactory->create();
         $data = $this->getRequest()->getPostValue();
+        // print_r($data);
+
         try {
             if ($data) {
                 $model = $this->_model;
                 $model->setData($data)->save();
+                
                 $this->messageManager->addSuccessMessage(__("Data Saved Successfully."));
                 $buttondata = $this->getRequest()->getParam('back');
                 if ($buttondata == 'add') {

@@ -15,7 +15,7 @@ class Form extends Action
      *
      * @see _isAllowed()
      */
-    const ACTION_RESOURCE='Embitel_Mymodule2::mymodule2';
+    const ACTION_RESOURCE='News_Career::career';
     /**
      * Core registry
      *
@@ -59,8 +59,8 @@ class Form extends Action
           public function execute()
           {
         $resultPage=$this->resultPageFactory->create();
-        $resultPage->addBreadcrumb(__('New career_module'),__('New career_module'));
-        $resultPage->getConfig()->getTitle()->prepend(__('New career_module'));
+        $resultPage->addBreadcrumb(__('New careermodule'),__('New career module'));
+        $resultPage->getConfig()->getTitle()->prepend(__('New career module'));
         return $resultPage;
 
 

@@ -2,6 +2,7 @@
 
 namespace News\Career\Block\Adminhtml\Button;
 
+
 use Magento\Backend\Block\Widget\Context;
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
@@ -19,6 +20,7 @@ class Delete extends Generic implements ButtonProviderInterface
     {
         $data = [];
         $id = $this->context->getRequest()->getParam('id');
+    
         if ($id) {
             $data = [
                 'label' => __('Delete'),
@@ -38,3 +40,5 @@ class Delete extends Generic implements ButtonProviderInterface
         return $this->getUrl('*/*/delete', ['id' => $id]);
     }
 }
+
+

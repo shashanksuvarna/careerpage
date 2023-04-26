@@ -16,7 +16,7 @@
             <button name="add">
                 <url path="*/*/form"/>
                 <class>primary</class>
-                <label translate="true">Add New Employee</label>
+                <label translate="true"> New Career</label>
             </button>
         </buttons>
         <spinner>cms_block_columns</spinner>
@@ -31,7 +31,7 @@
             </storageConfig>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <aclResource>Names_Career::career_config</aclResource>
+        <aclResource>News_Career::career_config</aclResource>
         <dataProvider class="Magento\Cms\Ui\Component\DataProvider" name="career_listing_data_source">
             <settings>
                 <requestFieldName>id</requestFieldName>
@@ -76,7 +76,7 @@
                         <message translate="true">Are you sure you want to delete selected items?</message>
                         <title translate="true">Delete items</title>
                     </confirm>
-                    <url path="cms/block/massDelete"/>
+                    <url path="*/*/delete"/>
                     <type>delete</type>
                     <label translate="true">Delete</label>
                 </settings>
@@ -98,7 +98,7 @@
         <settings>
             <editorConfig>
                 <param name="clientConfig" xsi:type="array">
-                    <item name="saveUrl" xsi:type="url" path="cms/block/inlineEdit"/>
+                    <item name="saveUrl" xsi:type="url" path="Career/block/Edit"/>
                     <item name="validateBeforeSave" xsi:type="boolean">false</item>
                 </param>
                 <param name="indexField" xsi:type="string">block_id</param>
@@ -174,7 +174,7 @@
         <column name="job_description">
             <settings>
                 <filter>text</filter>
-                <dataType>text</dataType>
+                <dataType>text</dataType>career
                 <label translate="true">job_description</label>
             </settings>
         </column>

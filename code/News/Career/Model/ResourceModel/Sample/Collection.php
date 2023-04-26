@@ -17,7 +17,6 @@ class Collection extends AbstractCollection
         $this->_init(
             'News\Career\Model\Sample',
             'News\Career\Model\ResourceModel\Sample'
-
         );
     }
     

@@ -41,7 +41,7 @@
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
                 <item name="collapsible" xsi:type="boolean">false</item>
-                <item name="label" xsi:type="string" translate="true">Employee Information</item>
+                <item name="label" xsi:type="string" translate="true">Career Information</item>
                 <item name="sortOrder" xsi:type="number">10</item>
             </item>
         </argument>
@@ -66,7 +66,9 @@
                 </checkbox>
             </formElements>
         </field> -->
-        <field name="id">
+
+
+        <!-- <field name="id">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
@@ -79,7 +81,9 @@
                     </item>
                 </item>
             </argument>
-        </field>
+        </field> -->
+        
+
         <field name="job_role">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
