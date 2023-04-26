@@ -1,0 +1,29 @@
+<?php 
+$sample=$block->getArticles(); 
+?><table>
+ <tr>
+    <th>ID</th>
+    <th>Job role</th>
+    <th>place</th>
+    <th> Email</th>
+    <th> Experiance</th>
+    <th> Job Description</th>
+    <th> Job responsibility</th>
+
+</tr>
+
+<?php
+foreach($sample as $data):
+?>
+<tr>
+<td><?php echo $data->getId(); ?></td>
+<td><?php echo $data->getJob_role(); ?></td>
+<td><?php echo $data->getPlace(); ?></td>
+<td><?php echo $data->getEmail(); ?></td>
+<td><?php echo $data->getExperience(); ?></td>
+<td><?php echo $data->getJob_description(); ?></td>
+<td><?php echo $data->getJob_responsibility(); ?></td>
+</tr>
+
+<?php endforeach; ?>
+</table>

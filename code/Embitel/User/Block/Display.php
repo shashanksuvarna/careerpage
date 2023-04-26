@@ -1,7 +1,9 @@
 <?php
-namespace News\Career\Block;
+namespace Embitel\User\Block;
 
 use \Magento\Framework\View\Element\Template;
+
+use News\Career\Model\Sample; //used model file
 
 class Display extends Template
 {
@@ -13,8 +15,11 @@ class Display extends Template
     */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
+        Sample $sample,
         array $data = []
+        
     ){
+        $this->_sample = $sample;
         parent::__construct($context, $data);
      }
 
@@ -23,7 +28,7 @@ class Display extends Template
     */
     public function getArticles()
     {
-        return 'getArticles function of the Block class called successfully';
+        return $this->_sample->getCollection(); 
     }
 }
 ?>

@@ -1,0 +1,26 @@
+<?php 
+$sample=$block->getArticles(); //getArticles from the block...
+?><table >
+ <tr>
+    <th>Job role</th>
+    <th>place</th>
+    <th> Experiance</th>
+</tr>
+
+<?php
+foreach($sample as $data):
+?>
+<tr>
+<?php $id=$data->getId();?>
+<td><?php echo $data->getJob_role(); ?></td>
+<td><?php echo $data->getPlace(); ?></td>
+<td><?php echo $data->getExperience(); ?></td>
+<td>
+
+<a href="<?php echo $this->getUrl('*/*/displaydetail', ['Id' => $id]) ?>">View job</a>
+</td>
+
+</tr>
+
+<?php endforeach; ?>
+</table>
