@@ -59,7 +59,7 @@ class Index extends Action
           public function execute()
           {
         $resultPage=$this->resultPageFactory->create();
-        $resultPage->addBreadcrumb(__('New career module'),__('New Career module'));
+        $resultPage->addBreadcrumb(__('New Career module'),__('New Career module'));
         $resultPage->getConfig()->getTitle()->prepend(__('New Career module'));
         return $resultPage;
 

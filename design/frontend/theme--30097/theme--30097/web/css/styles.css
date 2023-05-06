@@ -5752,8 +5752,8 @@ vertical-align:middle;
 }
 *
 {
-margin:0;
-padding:0;
+margin:30;
+padding:10;
 }
 @media only screen and (max-width:767px) 
 {
@@ -5775,8 +5775,8 @@ margin-right:4px;
 }
 fieldset
 {
-border:0;
-padding-bottom:5px;
+border: 35;
+    padding-bottom: 15px;
 }
 .boxcolor,.form-text
 {
