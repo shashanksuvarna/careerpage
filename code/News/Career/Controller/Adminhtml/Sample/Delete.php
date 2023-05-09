@@ -8,7 +8,7 @@ namespace News\Career\Controller\Adminhtml\Sample;
 use Magento\Framework\App\Action\HttpPostActionInterface;
 
 /**
- * Delete CMS page action.
+ * Delete Career page action.
  */
 class Delete extends \Magento\Backend\App\Action implements HttpPostActionInterface
 {

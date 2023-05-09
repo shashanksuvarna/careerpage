@@ -9,7 +9,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Backend\App\Action;
 
 /**
- * Edit CMS page action.
+ * Edit Career page action.
  */
 class Edit extends \Magento\Backend\App\Action implements HttpGetActionInterface
 {
@@ -64,7 +64,7 @@ class Edit extends \Magento\Backend\App\Action implements HttpGetActionInterface
     }
 
     /**
-     * Edit CMS page
+     * Edit Career page
      *
      * @return \Magento\Backend\Model\View\Result\Page|\Magento\Backend\Model\View\Result\Redirect
      * @SuppressWarnings(PHPMD.NPathComplexity)

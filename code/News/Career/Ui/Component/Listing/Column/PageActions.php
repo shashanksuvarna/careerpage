@@ -19,8 +19,8 @@ use Magento\Ui\Component\Listing\Columns\Column;
 class PageActions extends Column
 {
     /** Url path */
-    const URL_PATH_EDIT = 'Career/sample/edit';
-    const URL_PATH_DELETE = 'Career/sample/delete';
+    const URL_PATH_EDIT = 'career/sample/edit';
+    const URL_PATH_DELETE = 'career/sample/delete';
     /**
      * @var \Magento\Cms\Block\Adminhtml\Page\Grid\Renderer\Action\UrlBuilder
      */

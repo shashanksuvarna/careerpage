@@ -73,43 +73,21 @@
         </field> -->
         <field name="enable">
 
-<argument name="data" xsi:type="array">
+           <argument name="data" xsi:type="array">
 <item name="options" xsi:type="object">News\Career\Model\Page\Source\EnablingPin</item>
-
 <item name="config" xsi:type="array">
-
 <item name="label" xsi:type="string" translate="true">available</item>
-
 <item name="dataType" xsi:type="string">text</item>
-
 <item name="formElement" xsi:type="string">select</item>
-
 <item name="dataScope" xsi:type="string">available</item>
-
-
-
-
 </item>
-
-
-
-
 </argument><settings>
-
-
-
-
 <validation>
-
 <rule name="required-entry" xsi:type="boolean">true</rule>
-
 </validation>
-
 </settings>
-
 </field>
 
-        
         <field name="job_role">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -165,7 +143,7 @@
                     <item name="dataScope" xsi:type="string">experience</item>
                     <item name="validation" xsi:type="array">
                          <item name="required-entry"  xsi:type="boolean">true</item>
-                         <!-- <item name="validate-number"  xsi:type="boolean">true</item> -->
+                         <item name="validate-number"  xsi:type="boolean">true</item>
 
                     </item>
                 </item>
