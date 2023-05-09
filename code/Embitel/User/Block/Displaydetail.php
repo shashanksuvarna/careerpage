@@ -5,7 +5,7 @@ use \Magento\Framework\View\Element\Template;
 
 use News\Career\Model\Sample; //used backend model file
 
-class Display extends Template
+class Displaydetail extends Template
 {
     /**
      * Constructor
@@ -28,5 +28,12 @@ class Display extends Template
     public function getArticles()
     {
         return $this->_sample->getCollection();
+    }
+
+    public function getAssetUrl($asset)
+    {
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $assetRepository = $objectManager->get('Magento\Framework\View\Asset\Repository');
+        return $assetRepository->createAsset($asset)->getUrl();
     }
 }

@@ -1,0 +1,42 @@
+<!--@subject {{var subject}} @-->
+<!--@vars {
+"var email":"Email Address",
+"var subject":"Subject"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<!-- {{template file="Embitel_User::email/header.html"}} -->
+
+<p>Subject: {{var subject}}</p>
+<p>Dear Sir/Madam,</p>
+
+<p>The applicant  has applied for the job, and the details of the applicant are below with cv attached:</p>
+
+<ul>
+  <table>
+    <tr>
+        <td>{{trans "Name :"}} {{var data.name}}</td>
+    </tr>
+    <tr>
+        <td>{{trans "Mobile Number :"}} {{var data.phone}}</td>
+    </tr>
+    <tr>
+        td>{{trans "place :"}} {{var data.location}}</td>
+    </tr>
+    <tr>
+        td>{{trans "Date of birth :"}} {{var data.date_of_birth}}</td>
+    </tr>
+  </table>
+</ul>
+
+<!-- Display the attachment link -->
+{{if var attachment_url}}
+    <p>Attachment: <a href="{{var attachment_url}}">{{var attachment_name}}</a></p>
+{{/if}}
+
+
+<p>Best regards,</p>
+<p>{{var data.name}}</p>
+
+{{template config_path="design/email/footer_template"}}

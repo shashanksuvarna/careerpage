@@ -1,29 +1,28 @@
-<?php 
-$sample=$block->getArticles(); 
-?><table>
- <tr>
-    <th>ID</th>
-    <th>Job role</th>
-    <th>place</th>
-    <th> Email</th>
-    <th> Experiance</th>
-    <th> Job Description</th>
-    <th> Job responsibility</th>
+<link rel="stylesheet" type="text/css" href="<?php echo $block->getViewFileUrl('Embitel_User::css/custom.css')?>">
 
-</tr>
-
+<div class="align">
+<div class="leftt">
 <?php
-foreach($sample as $data):
+$model = $block->getData('news_career');
 ?>
-<tr>
-<td><?php echo $data->getId(); ?></td>
-<td><?php echo $data->getJob_role(); ?></td>
-<td><?php echo $data->getPlace(); ?></td>
-<td><?php echo $data->getEmail(); ?></td>
-<td><?php echo $data->getExperience(); ?></td>
-<td><?php echo $data->getJob_description(); ?></td>
-<td><?php echo $data->getJob_responsibility(); ?></td>
-</tr>
+<div style="float:inline;">
+<h1><?php echo $model->getTitle(); ?></h1>
+<p><b>  Job Role  </b>
+<div>
+    <?php echo $model->getJob_role(); ?></p>
+</div>
+<p><b>Experience </b>
+<div> <?php echo $model->getExperience(); ?></p>
+</div>
 
-<?php endforeach; ?>
-</table>
+<p><b>Job Description </b>
+<div>
+    <?php echo $model->getJob_description(); ?></p>
+</div>
+<p><b>Job Responsibility </b>
+<div> <?php echo $model->getJob_responsibility(); ?></p></div>
+<?php $custId = $this->getRequest()->getParam('id'); ?>
+
+</div>
+</div>
+<div>

@@ -3,9 +3,7 @@ namespace Embitel\User\Block;
 
 use \Magento\Framework\View\Element\Template;
 
-use News\Career\Model\Sample; //used backend model file
-
-class Display extends Template
+class Article extends Template
 {
     /**
      * Constructor
@@ -15,10 +13,8 @@ class Display extends Template
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
-        Sample $sample,
         array $data = []
     ) {
-        $this->_sample = $sample;
         parent::__construct($context, $data);
     }
 
@@ -27,6 +23,13 @@ class Display extends Template
      */
     public function getArticles()
     {
-        return $this->_sample->getCollection();
+        // return 'getArticles function of the Block class called successfully';
+    }
+
+    public function getAssetUrl($asset)
+    {
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $assetRepository = $objectManager->get('Magento\Framework\View\Asset\Repository');
+        return $assetRepository->createAsset($asset)->getUrl();
     }
 }

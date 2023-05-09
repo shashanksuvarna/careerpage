@@ -1,0 +1,112 @@
+<link rel="stylesheet" type="text/css" href="<?php echo $block->getViewFileUrl('Embitel_User::css/custom.css')?>">
+
+<div class="align">
+<div class="rightt">
+
+    <!-- this is form for a user to apply for the job -->
+
+        <form name="addData" method="post" id="addData" class="form"
+         action="<?php echo $block->getBaseUrl().'user/index/save';?>"  enctype="multipart/form-data"
+
+        data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+      data-mage-init='{"validation":{}}'>
+
+
+            <fieldset class="fieldset">
+                <legend class="legend" style=" padding-left:117px;"><span><?= $block->escapeHtmlAttr(__('Fill The Form Properly')) ?></span></legend>
+
+                <fieldset class="fieldset row">
+                    <div class="fields col-md-6">
+
+                        <div class="field name required" style="padding-left: 86px;
+                            padding-right: 70px;">
+                            <label class="label" for="name"
+                            style="color:black;font-size:15px"><span><?= $block->
+                                escapeHtmlAttr(__('Name')) ?></span></label>
+                            <div class="control">
+                                <input name="name" id="name" title="name" value="" class="input-text" type="text" 
+                                       data-validate="{required:true,minlength: 2}" style="border-radius: 10px;"/>
+                            </div>
+                        </div>
+
+
+                        <div class="field email required" style="padding-left: 86px;
+                            padding-right: 70px;">
+                            <label class="label" for="email" 
+                            style="color:black;font-size:15px"><span><?= $block->escapeHtmlAttr(__('Email id')) ?></span></label>
+                            <div class="control">
+                                <input name="email" id="email" title="email" style="border-radius: 10px;"
+                                value="<?= $block->escapeHtmlAttr($block->getEmailValue()) ?>" class="input-text"
+                                       type="email" data-validate="{required:true, 'validate-email':true,equalTo:'#email'}"
+                                       data-mage-init='{"mage/trim-input":{}}'>
+
+                            </div>
+                        </div>
+                      
+                        <div class="field telephone required" style="padding-left: 86px;
+                            padding-right: 70px;">
+                            <label class="label" for="telephone"
+                            style="color:black;font-size:15px">
+                            <span><?= $block->escapeHtmlAttr(__('Mobile Number')) ?>
+                        </span></label>
+                            <div class="control">
+                                <input name="phone" id="phone" title="mobile number" value="" class="input-text" style="border-radius: 10px;"
+                                type="number" data-validate="{required:true,minlength:10,maxlength:12}">
+                            </div>
+                        </div>
+                        
+                        <div class="field comment required" style="padding-left: 86px;
+                            padding-right: 70px;" >
+                            <label class="label" for="comment"
+                            style="color:black;font-size:15px"><span><?= $block->escapeHtmlAttr(__('Address')) ?></span></label>
+                            <div class="control">
+                                <textarea id="location" name="location" title="location" class="" cols=10 rows=5 data-validate="{required:true}" style="border-radius: 10px;">
+                            </textarea>
+                            </div>
+                        </div>
+
+                       
+                        <div class="field date required" style="padding-left: 86px;
+                            padding-right: 70px;" >
+                            <label class="label" for="date" 
+                            style="color:black;font-size:15px"><span><?= $block->escapeHtmlAttr(__('Date Of Birth')) ?></span></label>
+                            <div class="control">
+                                <input name="date_of_birth" id="date_of_birth" style="border-radius: 10px;"title="date_of_birth" value="" class="validate-date"
+                                       type="date" data-validate="{required:true}" min="<?php echo date('1975-05-07'); ?>" max="<?php echo date('2023-05-07'); ?>">
+                            </div>
+                        </div>
+
+                        <div class="field attachment-pdf required" style="padding-left: 86px;
+                            padding-right: 70px;">
+                             <label class="label" for="attachment-pdf"  
+                             style="color:black;font-size:15px"><span><?php /* @escapeNotVerified */ echo __('PDF') ?></span></label>
+                              <div class="control">
+                            <input name="attachment-pdf" id="attachment-pdf" accept=".pdf,.docx" name="attachment-pdf" type="file" value="" accept='application/pdf' data-validate="{required:true}" required/>
+                         </div>
+                    </div>
+
+                      
+
+                    </div>
+                </fieldset>
+            </fieldset>
+            <div class="actions">
+                <div class="primary">
+                <button type="submit" class="submit" title="Save" ><span><?= $block->
+                        escapeHtmlAttr(__('Save')) ?></span>
+                    </button>
+
+                    <button type="reset" title="reset" class="submit" >
+                    <span><?= $block->escapeHtmlAttr(__('Reset')) ?></span>
+                    </button>
+
+                </div>
+
+            </div>
+            <!-- <input type="hidden" name="mail" value="email"/>  -->
+        </form>
+        
+
+</div>
+</div>
+

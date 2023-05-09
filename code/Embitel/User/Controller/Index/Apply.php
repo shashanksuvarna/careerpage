@@ -1,11 +1,12 @@
 <?php
+//contriller for user application
 
 namespace Embitel\User\Controller\Index;
 
 use \Magento\Framework\App\Action\HttpGetActionInterface;
 use \Magento\Framework\View\Result\PageFactory;
 
-class Index implements HttpGetActionInterface
+class Apply implements HttpGetActionInterface
 {
     /**
      * @var \Magento\Framework\View\Result\PageFactory
