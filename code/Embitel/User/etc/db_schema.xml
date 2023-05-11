@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    
+    <table name="user_application">
+        <column xsi:type="int" name="user_id" padding="10" nullable="false" identity="true" comment="ID" />
+        
+        <column xsi:type="varchar" name="name" length="100" nullable="false" comment="first name" />
+    
+        <column xsi:type="varchar" name="email" length="100" nullable="false" comment="e-mail" />
+    
+        <column xsi:type="int" name="phone" length="100" nullable="false" comment="phone number" />
+
+        <column xsi:type="varchar" name="location" length="100" nullable="false" comment="location" />
+
+        <column xsi:type="blob" name="attachment-pdf" length="100" nullable="false" comment="attachment-pdf"/>  
+       
+        <column xsi:type="varchar" name="date_of_birth" length="100" nullable="false" comment="date of birth" />        
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="user_id" />
+        </constraint>
+    </table>
+</schema>
