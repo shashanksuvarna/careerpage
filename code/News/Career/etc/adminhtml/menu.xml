@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+<menu>
+<add id="News_Career::career"
+title="Career" translate="title"
+module="News_Career"
+sortOrder="20"
+resource="News_Career::career"/>
+<add id="News_Career::manage" title="All Careers" translate="title" module="News_Career" sortOrder="10" parent="News_Career::career" action="career/sample" resource="News_Career::manage"/>
+
+</menu>
+</config>
