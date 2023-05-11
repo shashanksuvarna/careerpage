@@ -1,5 +1,6 @@
-<?php 
+<?php
 namespace News\Career\Model;
+
 use Magento\Framework\Model\AbstractModel;
 
 class Sample extends AbstractModel

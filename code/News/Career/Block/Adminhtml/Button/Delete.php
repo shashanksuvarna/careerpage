@@ -20,8 +20,8 @@ class Delete extends Generic implements ButtonProviderInterface
     //  */
 
        /**
-       * @inheritDoc
-       */
+        * @inheritDoc
+        */
 
     public function getButtonData()
     {
@@ -33,7 +33,7 @@ class Delete extends Generic implements ButtonProviderInterface
                 'class' => 'delete',
                 'on_click' => 'deleteConfirm(\'' . __(
                     'Are you sure you want to delete this file?'
-                    ) . '\', \'' . $this->getDeleteUrl() . '\', {"data": {}})',
+                ) . '\', \'' . $this->getDeleteUrl() . '\', {"data": {}})',
                 'sort_order' => 20,
             ];
         }
@@ -52,5 +52,3 @@ class Delete extends Generic implements ButtonProviderInterface
         return $this->getUrl('*/*/delete', ['id' => $id]);
     }
 }
-
-

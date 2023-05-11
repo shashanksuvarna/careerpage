@@ -40,29 +40,25 @@ class Form extends Action
      * @param Context $context
      */
     public function __construct(
-         Registry $registry,
-
-       PageFactory $resultPageFactory,
-
-          ForwardFactory $resultForwardFactoty,
-          Context $context)
-          {
+        Registry $registry,
+        PageFactory $resultPageFactory,
+        ForwardFactory $resultForwardFactoty,
+        Context $context
+    ) {
             $this->coreRegistry =$registry;
             $this->resultPageFactory =$resultPageFactory;
 
             $this->resultForwardFactory =$resultForwardFactoty;
             parent::__construct($context);
-          }
+    }
           /**
            * @return \Magento\Framework\View\Result\Page
            */
-          public function execute()
-          {
+    public function execute()
+    {
         $resultPage=$this->resultPageFactory->create();
-        $resultPage->addBreadcrumb(__('New career module'),__('New career module'));
+        $resultPage->addBreadcrumb(__('New career module'), __('New career module'));
         $resultPage->getConfig()->getTitle()->prepend(__('New career module'));
         return $resultPage;
-
-
-          }
-        }
+    }
+}
