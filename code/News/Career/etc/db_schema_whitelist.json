@@ -1,0 +1,17 @@
+{
+    "career_data": {
+        "column": {
+            "id": true,
+            "job_role": true,
+            "place": true,
+            "email": true,
+            "experience": true,
+            "job_description": true,
+            "job_respo": true,
+            "job_responsibility": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
